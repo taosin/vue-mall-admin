@@ -5,7 +5,9 @@
       <menu-side></menu-side>
     </aside>
     <main class="right-container">
-      <header class="top-header">dadasda</header>
+      <header class="top-header">
+        <top-header></top-header>
+      </header>
       <main class="main-container">
         <router-view> </router-view>
       </main>
@@ -14,10 +16,11 @@
 </template>
 <script>
 import menuSide from './menu-side';
-
+import topHeader from './top-header'
 export default{
     components:{
-        menuSide
+        menuSide,
+        topHeader
     },
     data(){
         return{
