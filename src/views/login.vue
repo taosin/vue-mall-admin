@@ -4,7 +4,7 @@
     <div class="login-container">
         <el-form label-width="66px" :model="formLogin" label-position="left" :rules="rules" ref="ruleForm" hide-required-asterisk>
             <el-form-item label="用户名" prop="username">
-                <el-input v-model="formLogin.username" placeholder="请输入用户名"></el-input>
+                <el-input v-model="formLogin.username" placeholder="请输入用户名" autofocus></el-input>
             </el-form-item>
             <el-form-item label="密码" prop="password">
                 <el-input type="password" v-model="formLogin.password" placeholder="请输入密码"></el-input>
@@ -37,32 +37,25 @@ export default{
             loading: false
          };
     },
-    mounted(){
-    },
-    watch:{
-    },
-    computed:{
-    },
-    methods:{
-        submitLogin(){
-            this.$refs.ruleForm.validate(valid => {
-                if(valid){
+    methods: {
+        submitLogin() {
+            this.$refs.ruleForm.validate( valid => {
+                if (valid) {
                     this.handlerLogin();
-                }else{
-                    console.log('failure');
-                    return false
+                } else {
+                    return false;
                 }
-            })
+            });
         },
-        handlerLogin(){
-            const self = this
+        handlerLogin() {
+            const self = this;
             self.loading = true;
-            setTimeout(()=>{
+            setTimeout(() => {
                 self.loading = false;
-                self.$router.push({path:'/dashboard'})
-            },3000);
+                self.$router.push({path: '/dashboard'});
+            }, 3000);
         },
-    }
+    },
 };
 </script>
 <style lang="less" scoped>

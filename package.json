@@ -9,9 +9,13 @@
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "css-base": "^1.0.0",
+    "css-loader": "^3.0.0",
     "element-ui": "^2.9.2",
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
     "vue-property-decorator": "^8.1.0",
