@@ -57,7 +57,7 @@ export default {
   },
   data() {
     return {
-      sideBg: "#545c64",
+      sideBg: "#409EFF",
       menus: [{
         title: '首页',
         path: '/dashboard',

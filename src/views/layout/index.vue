@@ -1,18 +1,25 @@
 <template>
   <div class="layout container">
-    <aside class="left-aside" :style="{width: collspan?'64px':'200px'}">
-      <h3 v-show="!collspan">{{site_title}}</h3>
+    <aside class="left-aside" :style="{ width: collspan ? '64px' : '200px' }">
+      <h3 v-show="!collspan">{{ site_title }}</h3>
       <menu-side :isCollapse="collspan"></menu-side>
       <div class="bottom-collspan">
-        <el-button type="text" :icon="collspan?'el-icon-arrow-right':'el-icon-arrow-left'" @click="collspan=!collspan"></el-button>
+        <el-button
+          type="text"
+          :icon="collspan ? 'el-icon-arrow-right' : 'el-icon-arrow-left'"
+          @click="collspan = !collspan"
+        ></el-button>
       </div>
     </aside>
-    <main class="right-container" :style="{left: collspan?'64px':'200px'}">
+    <main
+      class="right-container"
+      :style="{ left: collspan ? '64px' : '200px' }"
+    >
       <header class="top-header">
         <top-header></top-header>
       </header>
       <main class="main-container">
-        <router-view> </router-view>
+        <router-view class="view-router"> </router-view>
       </main>
     </main>
   </div>
@@ -27,7 +34,7 @@ export default {
   },
   data() {
     return {
-      site_title: '欢迎使用电商运营后台',
+      site_title: "欢迎使用电商运营后台",
       collspan: false
     };
   },
@@ -53,13 +60,13 @@ export default {
     width: 200px;
     // border-right: 1px solid;
     box-sizing: border-box;
-    background-color: #545c64;
-    transition: .3s;
-    .bottom-collspan{
+    background-color: #409EFF;
+    transition: 0.3s;
+    .bottom-collspan {
       position: absolute;
       bottom: 0;
       width: inherit;
-      .el-button{
+      .el-button {
         color: #fff;
       }
     }
@@ -67,7 +74,7 @@ export default {
   .right-container {
     right: 0;
     left: 200px;
-    transition: .3s;
+    transition: 0.3s;
     .top-header {
       position: relative;
       height: 60px;
@@ -76,6 +83,18 @@ export default {
       display: flex;
       flex-direction: row-reverse;
       padding-right: 20px;
+    }
+    .main-container {
+      padding: 5px;
+      padding-bottom: 0;
+      background-color: #dfdfdf;
+      height: calc(100% - 61px);
+      box-sizing: border-box;
+      overflow-y: auto;
+      .view-router{
+        border-radius: 2px;
+        height: 100%;
+      }
     }
   }
 }

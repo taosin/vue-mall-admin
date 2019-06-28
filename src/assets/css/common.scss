@@ -1,3 +1,22 @@
 @import '~element-ui/lib/theme-chalk/index.css';
 
 $sideBg: #545c64;
+
+.title-text{
+    color: #303133;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px 0 5px 10px;
+    border-bottom: 1px solid #DCDFE6;
+}
+
+section{
+    background-color: #fff;
+    margin-bottom: 10px;
+    .content{
+        width: inherit;
+        padding: 10px;
+        text-align: left;
+    }
+}
