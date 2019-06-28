@@ -1,13 +1,14 @@
 <template>
   <div class="side-menu">
     <el-menu
+      :collapse="isCollapse"
       default-active="2"
       class="el-menu-vertical-demo"
       @open="handleOpen"
       @close="handleClose"
       :background-color="sideBg"
       text-color="#fff"
-      active-text-color="#ceddef"
+      active-text-color="#ffd04b"
     >
       <el-submenu index="1">
         <template slot="title">
@@ -25,7 +26,9 @@
           <el-menu-item index="1-3">选项3</el-menu-item>
         </el-menu-item-group>
         <el-submenu index="1-4">
-          <template slot="title">选项4</template>
+          <template slot="title"
+            >选项4</template
+          >
           <el-menu-item index="1-4-1">选项1</el-menu-item>
         </el-submenu>
       </el-submenu>
@@ -46,9 +49,29 @@
 </template>
 <script>
 export default {
+  props: {
+    isCollapse: {
+      type: Boolean,
+      default: false
+    }
+  },
   data() {
     return {
-      sideBg: '#5893d4'
+      sideBg: "#545c64",
+      menus: [{
+        title: '首页',
+        path: '/dashboard',
+      }, {
+        title: '用户管理',
+        path: '/user',
+        children: [{
+          title: '用户列表',
+          path: 'list'
+        },{
+          title: '用户分析',
+          path: 'analisys'
+        }]
+      }]
     };
   },
   mounted() {},
@@ -65,8 +88,8 @@ export default {
 };
 </script>
 <style lang="less">
-.side-menu{
-  .el-menu{
+.side-menu {
+  .el-menu {
     border: none;
   }
 }
