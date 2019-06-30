@@ -12,12 +12,12 @@
 import sectionFirst from './section-first.vue';
 import sectionSecond from './section-second.vue';
 export default{
-    components:{
+    components: {
         sectionFirst,
         sectionSecond
     },
-    data(){
-        return{
+    data () {
+        return {
          };
     },
     mounted(){

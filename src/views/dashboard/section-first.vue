@@ -31,28 +31,28 @@ export default {
     return {
       items: [
         {
-          title: "订单金额",
+          title: '订单金额',
           value: 3232.12,
-          tip: "今日已支付订单金额汇总",
-          icon: "el-icon-money"
+          tip: '今日已支付订单金额汇总',
+          icon: 'el-icon-money'
         },
         {
-          title: "实收金额",
+          title: '实收金额',
           value: 3232.12,
-          tip: "今日已支付订单实收金额汇总",
-          icon: "el-icon-s-order"
+          tip: '今日已支付订单实收金额汇总',
+          icon: 'el-icon-s-order'
         },
         {
-          title: "订单总数",
+          title: '订单数量',
           value: 3232.12,
-          tip: "今日已支付订单数量汇总",
-          icon: "el-icon-s-order"
+          tip: '今日已支付订单数量汇总',
+          icon: 'el-icon-s-order'
         },
         {
-          title: "注册用户",
+          title: '注册用户',
           value: 3232.12,
-          tip: "今日新注册用户数量汇总",
-          icon: "el-icon-user"
+          tip: '今日新注册用户数量汇总',
+          icon: 'el-icon-user'
         }
       ]
     };
