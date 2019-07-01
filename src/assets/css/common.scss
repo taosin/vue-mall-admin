@@ -24,6 +24,18 @@ section{
     padding: 15px;
     text-align: left;
     background-color: #fff;
+    .search-bar{
+    }
+    .btn-list{
+        border: 1px solid #dfdfdf;
+        border-radius: 5px;
+        // margin: 10px 0;
+        padding: 10px;
+        text-align: right
+    }
+    .tab-bar{
+        margin: 10px 0;
+    }
     .footer-pagination{
         position: absolute;
         bottom: 0;

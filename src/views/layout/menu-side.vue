@@ -6,9 +6,6 @@
       class="el-menu-vertical-demo"
       @open="handleOpen"
       @close="handleClose"
-      :background-color="sideBg"
-      text-color="#fff"
-      active-text-color="#ffd04b"
     >
       <el-submenu index="1">
         <template slot="title">

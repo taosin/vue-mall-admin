@@ -60,14 +60,14 @@ export default {
     width: 200px;
     // border-right: 1px solid;
     box-sizing: border-box;
-    background-color: #409EFF;
+    // background-color: #409EFF;
     transition: 0.3s;
     .bottom-collspan {
       position: absolute;
       bottom: 0;
       width: inherit;
       .el-button {
-        color: #fff;
+        color: #333;
       }
     }
   }

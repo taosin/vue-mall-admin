@@ -26,6 +26,10 @@
         </el-form-item>
       </el-form>
     </div>
+    <div class="btn-list">
+        <el-button type="danger" @click="onSubmit" size="small">批量删除</el-button>
+        <el-button type="primary" @click="onSubmit" size="small">新增</el-button>
+    </div>
     <div class="tab-bar">
       <el-tabs v-model="activeName" @tab-click="handleClick">
         <el-tab-pane label="已上线" name="first"></el-tab-pane>
