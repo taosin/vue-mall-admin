@@ -13,3 +13,12 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  data () {
+    return {
+      radio1: '北京'
+    }
+  }
+}
+</script>
