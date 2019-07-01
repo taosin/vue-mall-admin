@@ -28,6 +28,19 @@ const routers = [
             }
         ]
     }, {
+        name: 'order',
+        path: '/order',
+        component: Layout,
+        redirect: 'order/list',
+        children: [
+            {
+                name: 'order-list',
+                path: '/order/list',
+                component: () => import('@/views/order/list.vue'),
+                meta: { title: '订单列表', icon: 'order-list' }
+            }
+        ]
+    }, {
         path: '/login',
         component: resolve => require(['@/views/login.vue'], resolve),
         meta: { title: '登录', icon: 'product-list' }
