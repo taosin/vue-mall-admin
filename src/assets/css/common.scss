@@ -20,3 +20,15 @@ section{
         text-align: left;
     }
 }
+.view{
+    padding: 15px;
+    text-align: left;
+    background-color: #fff;
+    .footer-pagination{
+        position: absolute;
+        bottom: 0;
+        background-color: #fff;
+        z-index: 99;
+        padding: 5px 0px;
+    }
+}
