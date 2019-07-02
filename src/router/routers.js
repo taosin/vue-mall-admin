@@ -1,3 +1,11 @@
+/**
+ * name: 唯一标识
+ * path: 路由路径
+ * redirect: 路由重定向
+ * component: 页面展示
+ * isMenu:Boolean 是否菜单, 默认是菜单，值为 true
+ * needAuth:Boolean 是否需要权限校验， 默认值为 true
+ */
 import Layout from '@/views/layout/index'
 const routers = [
    {
@@ -43,7 +51,9 @@ const routers = [
     }, {
         path: '/login',
         component: resolve => require(['@/views/login.vue'], resolve),
-        meta: { title: '登录', icon: 'product-list' }
+        meta: { title: '登录', icon: 'product-list' },
+        isMenu: false,
+        needAuth: false 
     }
 ]
 export default routers

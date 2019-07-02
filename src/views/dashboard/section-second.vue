@@ -17,8 +17,8 @@
 export default {
   data () {
     return {
-      radio1: '北京'
-    }
+      radio1: '北京',
+    };
   }
 }
 </script>
