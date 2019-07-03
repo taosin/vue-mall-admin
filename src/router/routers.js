@@ -13,6 +13,7 @@ const routers = [
         path: '/',
         redirect: '/dashboard',
         component: Layout,
+        meta: { title: '首页', icon: 'user-list' },
         children: [
             {
                 name: 'dashboard',
@@ -27,6 +28,7 @@ const routers = [
         path: '/user',
         component: Layout,
         redirect: 'user/list',
+        meta: { title: '用户管理', icon: 'user-list' },
         children: [
             {
                 name: 'user-list',
@@ -40,6 +42,7 @@ const routers = [
         path: '/order',
         component: Layout,
         redirect: 'order/list',
+        meta: { title: '订单管理', icon: 'order-list' },
         children: [
             {
                 name: 'order-list',

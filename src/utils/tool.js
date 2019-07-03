@@ -1,3 +1,3 @@
-export const filterByRoutersAndPermissionToMenuDatas = (routers, permissionTree) => {
 
+export const filterByRoutersAndPermissionToMenuDatas = (routers, permissionTree) => {
 };

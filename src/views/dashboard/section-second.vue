@@ -5,20 +5,28 @@
     </div>
     <div class="content">
       <el-radio-group v-model="radio1">
-        <el-radio-button label="上海"></el-radio-button>
-        <el-radio-button label="北京"></el-radio-button>
-        <el-radio-button label="广州"></el-radio-button>
-        <el-radio-button label="深圳"></el-radio-button>
+        <template v-for="(item,index)
+         of items">
+          <el-radio-button :label="item.text" :key="index"></el-radio-button>
+        </template>
       </el-radio-group>
     </div>
   </div>
 </template>
 <script>
 export default {
-  data () {
+  data() {
     return {
-      radio1: '北京',
+      radio1: "0",
+      items: [
+        { text: "订单金额", val: "order-cash" },
+        { text: "实收金额", val: "order-cash" },
+        { text: "订单数", val: "order-cash" },
+        { text: "下单人数", val: "order-cash" },
+        { text: "经毛利率", val: "order-cash" },
+        { text: "新客数", val: "order-cash" }
+      ]
     };
   }
-}
+};
 </script>

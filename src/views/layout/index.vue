@@ -2,7 +2,7 @@
   <div class="layout container">
     <aside class="left-aside" :style="{ width: collspan ? '64px' : '200px' }">
       <h3 v-show="!collspan">{{ site_title }}</h3>
-      <menu-side :isCollapse="collspan"></menu-side>
+      <menu-side :isCollapse="collspan" :datas="menus"></menu-side>
       <div class="bottom-collspan">
         <el-button
           type="text"
@@ -27,6 +27,7 @@
 <script>
 import menuSide from "./menu-side";
 import topHeader from "./top-header";
+import routers from '@/router/routers'
 export default {
   components: {
     menuSide,
@@ -35,7 +36,8 @@ export default {
   data() {
     return {
       site_title: "欢迎使用电商运营后台",
-      collspan: false
+      collspan: false,
+      menus: routers
     };
   },
   mounted() {},
