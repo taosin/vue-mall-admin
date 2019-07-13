@@ -35,7 +35,12 @@ const routers = [
                 path: '/user/list',
                 component: () => import('@/views/user/list.vue'),
                 meta: { title: '用户列表', icon: 'user-list' }
-            }
+            }, {
+                name: 'user-add',
+                path: '/user/add',
+                component: () => import('@/views/user/add.vue'),
+                meta: { title: '新增用户', icon: 'user-list' }
+            },
         ]
     }, {
         name: 'order',

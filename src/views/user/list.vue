@@ -28,7 +28,7 @@
     </div>
     <div class="btn-list">
         <el-button type="danger" @click="onSubmit" size="small">批量删除</el-button>
-        <el-button type="primary" @click="onSubmit" size="small">新增</el-button>
+        <el-button type="primary" @click="gotoUrl('/user/add')" size="small">新增</el-button>
     </div>
     <div class="tab-bar">
       <el-tabs v-model="activeName" @tab-click="handleClick">
@@ -100,6 +100,9 @@ export default {
   methods: {
     handleClick(tab, event) {
       console.log(tab, event);
+    },
+    gotoUrl(url) {
+      this.$router.push({path: url})
     }
   }
 };
