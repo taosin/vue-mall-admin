@@ -11,15 +11,12 @@
         ></el-button>
       </div>
     </aside>
-    <main
-      class="right-container"
-      :style="{ left: collspan ? '64px' : '200px' }"
-    >
+    <main class="right-container" :style="{ left: collspan ? '64px' : '200px' }">
       <header class="top-header">
         <top-header></top-header>
       </header>
       <main class="main-container">
-        <router-view class="view-router"> </router-view>
+        <router-view class="view-router"></router-view>
       </main>
     </main>
   </div>
@@ -27,7 +24,7 @@
 <script>
 import menuSide from "./menu-side";
 import topHeader from "./top-header";
-import routers from '@/router/routers'
+import routers from "@/router/routers";
 export default {
   components: {
     menuSide,
@@ -93,7 +90,7 @@ export default {
       height: calc(100% - 61px);
       box-sizing: border-box;
       overflow-y: auto;
-      .view-router{
+      .view-router {
         border-radius: 2px;
         height: 100%;
       }

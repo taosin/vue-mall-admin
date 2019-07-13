@@ -2,13 +2,14 @@
   <div class="side-menu">
     <el-menu
       :collapse="isCollapse"
-      default-active="2"
+      default-active="/"
       class="el-menu-vertical-demo"
       @open="handleOpen"
       @close="handleClose"
+      router
     >
     <template v-for="(item, i) in datas">
-      <el-menu-item index="2" :key="i">
+      <el-menu-item :index="item.path" :key="i">
         <i class="el-icon-menu"></i>
         <span slot="title">{{item.meta.title}}</span>
       </el-menu-item>
