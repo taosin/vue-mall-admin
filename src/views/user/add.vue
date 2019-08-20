@@ -22,7 +22,7 @@
                 </el-form-item>
                 <el-form-item label="兴趣爱好">
                     <el-checkbox-group v-model="form.type">
-                        <el-checkbox label="美食/餐厅线上活动" name="type"></el-checkbox>
+                            <el-checkbox label="美食/餐厅线上活动" name="type"></el-checkbox>
                         <el-checkbox label="地推活动" name="type"></el-checkbox>
                         <el-checkbox label="线下主题活动" name="type"></el-checkbox>
                         <el-checkbox label="单纯品牌曝光" name="type"></el-checkbox>
