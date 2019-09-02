@@ -5,13 +5,15 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "tool": "node tools/index.js"
   },
   "dependencies": {
     "core-js": "^2.6.5",
     "css-base": "^1.0.0",
     "css-loader": "^3.0.0",
     "element-ui": "^2.9.2",
+    "inquirer": "^7.0.0",
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
     "node-sass": "^4.12.0",
