@@ -37,9 +37,11 @@ function init(type, name) {
         console.log('\n 名称不能为空');
         return;
     }
+    type === 'init-page' ? createPage(name) : createComponent(name);
+}
 
+function createPage(name) {
     let [folder_name, file_name] = name.split(' ')
-    console.log(folder_name, file_name);
     let folder_path = `${srcPath}/views/${folder_name}`
     let is_exist_folder = fs.existsSync(folder_path) || false;
     if (!is_exist_folder) {
@@ -55,4 +57,16 @@ function init(type, name) {
         fs.writeFileSync(`${folder_path}/${file_name}.vue`, data, { flag: 'a', encoding: 'utf-8', mode: '0666' });
     });
     console.log('\x1b[36m%s\x1b[0m', "\n  页面" + file_name + "完成初始化！");
+}
+function createComponent(name) {
+    let component_name = `${srcPath}/components/${name}`
+    let is_exist_folder = fs.existsSync(component_name) || false;
+    if (!is_exist_folder) {
+        fs.mkdirSync(component_name);
+        fs.readFile(__dirname + '/template.vue', 'utf-8', (err, data) => {
+            fs.writeFileSync(`${component_name}/index.vue`, data, { flag: 'a', encoding: 'utf-8', mode: '0666' });
+        });
+    } else {
+        console.log(`${component_name}组件已存在`);
+    }
 }
